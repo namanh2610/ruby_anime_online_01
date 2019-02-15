@@ -1,4 +1,6 @@
 vi:
+  application:
+    title: "Noel"
   header:
     language: "Ngôn ngữ: "
     or: " hoặc "
@@ -31,6 +33,7 @@ vi:
     vampire: "Ma cà rồng"
     add_movie: "Thêm phim"
     add_the_episode: "Thêm tập phim"
+    movie_management: "Quản lý phim"
   footer:
     action: "Hành động"
     fantasy: "Fantasy"
@@ -38,3 +41,10 @@ vi:
     contact: "Liên hệ với chúng tôi: "
     email: "Hoangnamanh2610@gmail.com"
     phone: "Số điện thoại: 123456789"
+  home:
+    title_home: "Trang chủ"
+    anime_new: "Anime mới"
+    see_more: "Xem thêm >>"
+    anime_series: "Anime dài tập"
+    new_category: "Thể loại mới"
+    anime_updated: "Anime mới cập nhật"
