@@ -34,6 +34,9 @@ en:
     add_movie: "Add movie"
     add_the_episode: "Add the episode"
     movie_management: "Movie manager"
+    settings: "Settings"
+    save_movies: "Save Movies"
+    log_out: "Log out"
   footer:
     action: "Action"
     fantasy: "Fantasy"
@@ -55,3 +58,22 @@ en:
     movie_link: "Movie link"
     status: "Status"
     error: "Does not exist"
+  login:
+    log_in: "Login"
+    user_name: "User name :"
+    password: "Password :"
+    save_password: "Save Password !!"
+  header_admin:
+    link_logout: "log out"
+    home: "Home"
+    account_management: "Accounts"
+    movie_management: "Movies"
+    add_movie: "Add movies"
+    add_episode: "Add episodes"
+  sessions:
+    login_fail:
+      danger: "Invalid email/password combination"
+  admin:
+    admins:
+      logged_in_admin:
+        danger: "Please login"

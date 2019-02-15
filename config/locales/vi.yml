@@ -34,6 +34,8 @@ vi:
     add_movie: "Thêm phim"
     add_the_episode: "Thêm tập phim"
     movie_management: "Quản lý phim"
+    save_movies: "Lưu phim"
+    log_out: "Đăng xuất"
   footer:
     action: "Hành động"
     fantasy: "Fantasy"
@@ -55,3 +57,22 @@ vi:
     movie_link: "Xem phim"
     status: "Trạng thái"
     error: "Không tồn tại"
+  login:
+    log_in: "Đăng nhập"
+    user_name: "Tên đăng nhập :"
+    password: "Mật khẩu :"
+    save_password: "Lưu mật khẩu !!"
+  header_admin:
+    link_logout: "Đăng xuất"
+    home: "Trang chủ"
+    account_management: "Tài khoản"
+    movie_management: "Phim"
+    add_movie: "Thêm phim"
+    add_episode: "Thêm tập"
+  sessions:
+    login_fail:
+      danger: "Sai tên tài khoản hoặc mật khẩu"
+  admin:
+    admins:
+      logged_in_admin:
+        danger: "Làm ơn đăng nhập"

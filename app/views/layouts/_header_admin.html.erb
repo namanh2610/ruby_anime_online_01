@@ -1,0 +1,59 @@
+<div class="content_frame">
+  <div class="language_frame">
+    <%= link_to current_user.account , "#", class: "link_login" %>
+    <i class="fa fa-qq" id=logo_login></i>
+    <%= link_to t("header_admin.link_logout"), logout_path, method: :delete, class: "link_login" %>
+    <div class="content_language">
+      <%= t"header.language" %>
+      <%= link_to image_tag("en.png", class: "logo_laguage"),
+            locale: "en" %>
+      <%= t"header.or" %>
+      <%= link_to image_tag("vi.jpg", class: "logo_laguage"),
+            locale: "vi" %>
+    </div>
+  </div>
+  <div class="nav_frame">
+    <div class="nav_big">
+      <div class="logo"></div>
+      <ul class="menu">
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header.home"), root_path, class: "link_menu_content" %>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header_admin.account_management"), "#", class: "link_menu_content" %>
+            </p>
+          </div>
+        </li>s
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header_admin.movie_management"), "#", class: "link_menu_content" %>
+            </p>
+          </div>
+          <ul class="header_admin_menu">
+            <li>
+              <table>
+                <tr>
+                  <td>
+                    <%= link_to t("header_admin.add_movie"), "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to t("header_admin.add_episode"), "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

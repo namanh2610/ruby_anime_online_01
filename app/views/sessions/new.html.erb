@@ -1,0 +1,26 @@
+<div class="login_frame">
+  <div class="login_text_1">
+    <p>
+      <%= t "login.log_in" %>
+    </p>
+  </div>
+  <%= form_for :session, url: login_path do |f| %>
+    <div class="login_frame_text_left">
+      <div class="login_text_2">
+        <%= f.label :account, t("login.user_name") %>
+      </div>
+      <div class="login_text_3">
+        <%= f.label :password, t("login.password") %>
+      </div>
+    </div>
+    <div class="login_frame_text_right">
+      <%= f.text_field :account, class: "login_input_text_1", size: 30 %>
+      <%= f.password_field :password, class: "login_input_text_2", size: 30 %>
+    </div>
+    <div class="login_frame_checkbox">
+      <%= f.check_box :remember_me %>
+      <span><%= t "login.save_password" %></span>
+    </div>
+    <%= f.submit t("login.log_in"), class: "login_button_login" %>
+  <% end %>
+</div>
