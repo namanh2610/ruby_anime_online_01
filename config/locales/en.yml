@@ -5,6 +5,7 @@ en:
     language: "Language: "
     or: " or "
     home: "Home"
+    link_registration: "Registration"
     movie_genre: "Movie genre"
     movies_by_year: "Movies by year"
     old: "old"
@@ -113,3 +114,10 @@ en:
     type: "Movie type: "
   movie_search:
     search: "Search results: %{text_search}"
+  watch_movie:
+    episodes: "List of episodes server google: "
+    detail: "Watch information"
+    tap: "Tập "
+    comment: "Comemnt"
+  comment:
+    danger: "Please login to comment"

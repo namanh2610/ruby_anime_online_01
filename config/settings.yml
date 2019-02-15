@@ -38,3 +38,9 @@ producer:
   max_email: 255
 status: 1
 total_episode: 25
+watch_movie:
+  value_item: 5
+  split_equal: "="
+  split_share: "/"
+  split_ask: "?"
+  url: "//ok.ru/videoembed/"

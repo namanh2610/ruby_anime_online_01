@@ -1,0 +1,41 @@
+<% provide :title, @movie.name %>
+
+<div class="watch_movie_frame_1">
+  <div class="watch_movie_text">
+    <div class="watch_movie_text_2">
+      <%= link_to t("watch_movie.detail") + " | " + @movie.name + " | " + t("watch_movie.tap") + @showepisodes.name, movie_path(params[:id].split("=").last.to_i), class: "watch_movie_text_1" %>
+    </div>
+  </div>
+  <iframe src=<%= watch_movie(get_key_url_movie params[:id_episode]) %> frameborder="0"  scrolling="no"  allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  <div>
+  </div>
+</div>
+<div class="watch_movie_frame_3">
+  <div class="watch_movie_text_episodes">
+    <p><%= t "watch_movie.episodes" %></p>
+  </div>
+  <div class="watch_movie_button_episodes">
+    <% @episodes.each do |e|%>
+      <%= button_tag type: :button, class: "watch_movie_buton" do %>
+        <% link_to t("watch_movie.tap") + e.name, watch_movie_path({:id => params[:id].split("=").last.to_i}, {:id_episode => e.id}), class: "watch_movie_linh_to" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="watch_movie_block">
+  </div>
+</div>
+<div class="watch_movie_frame_2">
+  <div class="comment_text">
+    <%= t "watch_movie.comment" %>
+  </div>
+  <div class="comment_movie_block">
+  </div>
+  <div class="content_comment_frame_2" id="content_comment_frame_2">
+    <%= render "comments/form" %>
+  </div>
+  <div class="content_comment_frame_1" id="content_comment_frame_1">
+    <%= render "comments/comment" %>
+  </div>
+  <div class="comment_movie_block">
+  </div>
+</div>

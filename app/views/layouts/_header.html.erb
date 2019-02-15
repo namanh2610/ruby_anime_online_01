@@ -2,10 +2,13 @@
   <div class="language_frame">
     <% if check_user %>
       <%= link_to current_user.account , "#", class: "link_login" %>
+      <i class="fa fa-qq" id=logo_login></i>
+      <%= link_to t("header_admin.link_logout"), logout_path, method: :delete, class: "link_login" %>
     <% else %>
-      <%= link_to t("header.link_login"), "login", class: "link_login" %>
+      <%= link_to t("header.link_login"), login_path, class: "link_login" %>
+      <i class="fa fa-qq" id=logo_login></i>
+      <%= link_to t("header.link_registration"), login_path, class: "link_login" %>
     <% end %>
-    <i class="fa fa-qq" id=logo_login></i>
     <div class="content_language">
       <%= t"header.language" %>
       <%= link_to image_tag("en.png", class: "logo_laguage"), locale: "en" %>
@@ -72,36 +75,11 @@
             </li>
           </ul>
         </li>
-        <% if logged_in? %>
-          <li>
-            <div class="link_menu">
-              <p>
-                <%= link_to t("header.settings"), "#", class: "link_menu_content" %>
-              </p>
-            </div>
-            <ul class="header_user_menu">
-              <li>
-                <table>
-                  <tr>
-                    <td>
-                      <%= link_to t("header.save_movies"), "#", class: "link_menu_1" %>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <%= link_to t("header.log_out"), logout_path, method: :delete, class: "link_menu_1" %>
-                    </td>
-                  </tr>
-                </table>
-              </li>
-            </ul>
-          </li>
-        <% end %>
       </ul>
       <div class="search_frame">
-        <%= form_tag movie_searchs_path, method: :get do |f| %>
+        <%= form_for movie_searchs_path, url: movie_searchs_path, method: :get do |f| %>
           <%= text_field_tag :search, params[:search], size: "30", class: "search_text" %>
-          <%= button_tag type: "submit", name: nil, class: "button_search" do %>
+          <%= button_tag(type: "submit", name: nil, class: "button_search") do %>
             <i class="fa fa-search"></i>
           <% end %>
         <% end %>

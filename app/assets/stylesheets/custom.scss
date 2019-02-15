@@ -252,9 +252,9 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    word-break: break-all;
     text-align: center;
     margin: 15px auto auto 10px;
-    word-break: break-all;
   }
 }
 /*movie detail*/
@@ -356,12 +356,18 @@
     float: left;
     margin: 35px 0px;
     border-radius: 15px;
+    font-size: 21px;
+    color: $color_blue_sky;
+    background: $color_transparent;
     &:hover{
       border: solid 1px $color_blue_sky;
     }
     .detail_text_movie_link{
-      margin: 4px 25px;
-      font-size: 21px;
+      margin-left: 22px;
+      margin-top: 4px;
+    }
+    .detail_movie_link_to{
+      text-decoration: none;
       color: $color_blue_sky;
     }
   }
@@ -911,3 +917,252 @@ ul.menu_footer li{
 .set_content{
   padding: 15px 13px
 }
+
+/* watch movie */
+.watch_movie_frame_1{
+  width: 990px;
+  height: 567px;
+  margin: 5px auto 10px auto;
+  background: $color_light_gray;
+  iframe {
+    width: 990px;
+    height: 527px;
+    border: none;
+    outline: none;
+    margin: auto;
+    display:block;
+  }
+  .watch_movie_text{
+    width: 990px;
+    height: 40px;
+    background: $color_light_gray3;
+    border-radius: 4px;
+    float: right;
+    text-align: center;
+    .watch_movie_text_2{
+      margin-top: 5px;
+      .watch_movie_text_1{
+        font-weight: bold;
+        font-size: 19px;
+        text-decoration: none;
+        color: $color_blue_sky;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+}
+.watch_movie_frame_3{
+  width: 990px;
+  min-height:50px;
+  border-radius: 4px;
+  margin: 5px auto 10px auto;
+  background: $color_light_gray;
+  .watch_movie_text_episodes{
+    width: 100%;
+  }
+  .watch_movie_button_episodes{
+    clear: both;
+    width: 90%;
+    margin: auto;
+    .watch_movie_buton{
+      border-radius: 2px;
+      border: none;
+      width: 70px;
+      height: 25px;
+      background: $color_light_gray3;
+      box-shadow: 1px 1px 1px 1px $color_transparent_black_1;
+      .watch_movie_linh_to{
+        color: white;
+        text-decoration: none;
+        &:hover{
+          color: $color_blue_sky;
+        }
+      }
+    }
+    form{
+      width: 70px;
+      height: 25px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      float: left;
+    }
+  }
+  .watch_movie_block{
+    width: 100%;
+    height: 15px;
+    clear: both;
+  }
+  p{
+    color: $color_blue_sky;
+    font-size: 19px;
+    font-weight: bold;
+    float: left;
+    margin: 7px 16px;
+  }
+}
+
+/*comment*/
+.watch_movie_frame_2{
+  width: 990px;
+  min-height:100px;
+  border-radius: 4px;
+  margin: 5px auto -5px auto;
+  background: $color_light_gray;
+  .comment_text{
+    color: $color_blue_sky;
+    border-bottom: solid 1px white;
+    width: 95%;
+    margin: auto;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .comment_movie_block{
+    width: 95%;
+    height: 15px;
+  }
+  .content_comment_frame_1{
+    width: 95%;
+    height: 85%;
+    margin: auto;
+  }
+  .content_comment_frame_2{
+    width: 95%;
+    min-height: 100px;
+    margin: auto;
+  }
+  .pagination_comment_frame{
+    width: 95%;
+    height: 50px;
+    margin: auto;
+  }
+}
+.item_comment_frame{
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px $color_transparent_black_1;
+  min-height: 100px;
+  background: $color_light_gray3;
+  .content_name_comment_frame{
+    width: 100%;
+  }
+  p{
+    color: $color_blue_sky;
+  }
+  .image_comment_frame{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    clear: both;
+    .image_comment{
+      width: 100%;
+    height: 100%;
+    }
+  }
+  .logo_comment_frame{
+    padding: 10px;
+    width: 75px;
+    height: 75px;
+    float: left;
+    .logo_comment{
+      width: 75px;
+      height: 75px;
+    }
+  }
+  .like_delete_comment_frame{
+    width: 80%;
+    height: 20px;
+    clear: both;
+    margin: auto;
+    .delete_comment{
+      text-decoration: none;
+      color: orange;
+      font-weight: bold;
+      float: right;
+      margin-right: 18px;
+      &:hover{
+        color: red;
+      }
+    }
+  }
+  .block_comment{
+    width: 70%;
+    margin-bottom: 10px;
+    height: 10px;
+  }
+  .input_comment_frame_1{
+    padding: 10px;
+    width: 90%;
+    min-height: 60px;
+    float: left;
+    margin-left: 10px;
+    p{
+      color: $color_blue_sky;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .input_comment{
+      width: 100%;
+      min-height: 40px;
+      outline: none;
+      color: white;
+    }
+  }
+}
+.input_comment_frame{
+  width: 100%;
+  min-height: 100px;
+  .logo_comment_frame{
+    width: 75px;
+    height: 75px;
+    float: left;
+    .logo_comment{
+      width: 75px;
+      height: 75px;
+    }
+  }
+  .input_comment_frame_1{
+    width: 90%;
+    min-height: 60px;
+    float: left;
+    margin-left: 10px;
+    p{
+      color: $color_blue_sky;
+      font-weight: bold;
+      font-size: 17px;
+    }
+    .input_comment{
+      width: 100%;
+      height: 40px;
+      outline: none;
+    }
+  }
+  .button_comment_frame{
+    clear: both;
+    width: 100%;
+    height: 30px;
+    .button_comment{
+      border: none;
+      outline: none;
+      float: right;
+      margin-right: 10px;
+      background: $color_blue_sky;
+      color: white;
+      width: 70px;
+    }
+    .button_image_comment{
+      color: white;
+      float: left;
+      margin-left: 85px;
+    }
+  }
+}
+.danger_comment_frame{
+  color: red;
+  opacity: 0.8;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+  padding: 25px;
+}
+

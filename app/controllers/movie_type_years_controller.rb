@@ -13,6 +13,7 @@ class MovieTypeYearsController < ApplicationController
     @movie = Movie.movie_properties
       .get_movie_by_year(params[:id],compare).check_status_movie
       .page(params[:page]).per(Settings.movie_type.value_item_movie)
+
     return if @movie
     flash.now[:error] = t "movie_type.error"
     redirect_to root_path

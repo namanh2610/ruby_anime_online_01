@@ -5,6 +5,7 @@ vi:
     language: "Ngôn ngữ: "
     or: " hoặc "
     home: "Trang chủ"
+    link_registration: "Đăng ký"
     movie_genre: "Thể loại phim"
     movies_by_year: "Phim theo năm"
     old: "Cũ"
@@ -112,3 +113,10 @@ vi:
     type: "Thể loại: "
   movie_search:
     search: "Kết quả tìm kiếm: %{text}"
+  watch_movie:
+    episodes: "Danh sách các tập server google: "
+    detail: "Xem thông tin"
+    tap: "Tập "
+    comment: "Comemnt"
+  comment:
+    danger: "Vui lòng đăng nhập để bình luận"
