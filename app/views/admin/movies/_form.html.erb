@@ -1,69 +1,68 @@
-<table class="table_form">
+<div class="form_add_film">
   <%= form_with model: [:admin, @movie], local: true do |f| %>
-    <tr>
-      <td class="set_text set_td1">
+    <div class="set_margin">
+      <div class="set_lable">
         <%= f.label :name, t("admin.movies.form.name"), class: "col-sm-2 col-form-label" %>
-      </td>
-      <td class="set_td2">
-        <div class="col-sm-10">
-          <%= f.text_field :name, class: "form-control", placeholder: t("admin.movies.form.name") %>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td class="set_text set_td1">
+      </div>
+      <div class="set_field">
+        <%= f.text_field :name, class: "form-control", placeholder: t("admin.movies.form.name") %>
+      </div>
+    </div>
+    <div class="set_margin_textarea">
+      <div class="set_lable">
         <%= f.label :content, t("admin.movies.form.content"), class: "col-sm-2 col-form-label" %>
-      </td>
-      <td class="set_content">
+      </div>
+      <div class="set_field">
         <%= f.text_area :content, class: "form-control rounded-0",rows: "4" %>
-      </td>
-    </tr>
-    <tr>
-      <td class="set_text set_padding set_td1">
+      </div>
+    </div>
+    <div class="set_margin">
+      <div class="set_lable">
         <%= f.label :total_episodes, t("admin.movies.form.total_episodes") , class: "col-sm-2 col-form-label" %>
-      </td>
-      <td class="set_td2">
-        <div class="col-sm-10 set_padding">
-          <%= f.text_field :total_episodes, class: "form-control", placeholder: t("admin.movies.form.total_episodes") %>
-        </div>
-      </td>
-    </tr>
+      </div>
+      <div class="set_field">
+        <%= f.text_field :total_episodes, class: "form-control", placeholder: t("admin.movies.form.total_episodes") %>
+      </div>
+    </div>
     <%= f.fields_for :images do |ff| %>
-      <tr>
-        <td class="set_text set_td1">
+      <div class="set_margin">
+        <div class="set_lable">
           <%= ff.label :image, t("admin.movies.form.image"), class: "col-sm-2 col-form-label" %>
-        </td>
-        <td class="set_content">
+        </div>
+        <div class="set_field">
           <%= ff.file_field :image, accept: "image/jpeg,image/gif,image/png", class: "form-control" %>
-        </td>
-      </tr>
+        </div>
+      </div>
+    <% end %>
+    <%= f.fields_for :movie_objects do |ff| %>
+      <div class="set_margin">
+        <div class="set_lable">
+          <%= ff.label :movie_type, "Movie type", class: "col-sm-2 col-form-label" %>
+        </div>
+        <div class="set_field">
+          <%= ff.select :movie_type_id, @list, class: "form-control", multiple: true %>
+        </div>
+      </div>
     <% end %>
     <%= f.fields_for :producers do |ff| %>
-      <tr>
-        <td class="set_text set_td1">
+      <div class="set_margin">
+        <div class="set_lable">
           <%= ff.label :name, t("admin.movies.form.producer_name"), class: "col-sm-2 col-form-label" %>
-        </td>
-        <td class="set_td2">
-          <div class="col-sm-10">
-            <%= ff.text_field :name, class: "form-control", placeholder: t("admin.movies.form.name") %>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="set_text set_td1">
+        </div>
+        <div class="set_field">
+          <%= ff.text_field :name, class: "form-control", placeholder: t("admin.movies.form.name") %>
+        </div>
+      </div>
+      <div class="set_margin">
+        <div class="set_lable">
           <%= ff.label :email, t("admin.movies.form.producer_email"), class: "col-sm-2 col-form-label" %>
-        </td>
-        <td class="set_td2">
-          <div class="col-sm-10">
-            <%= ff.text_field :email, class: "form-control", placeholder: t("admin.movies.form.email") %>
-          </div>
-        </td>
-      </tr>
+        </div>
+        <div class="set_field">
+          <%= ff.text_field :email, class: "form-control", placeholder: t("admin.movies.form.email") %>
+        </div>
+      </div>
     <% end %>
-    <tr>
-      <td colspan="2" class="set_padding">
-        <%= f.submit t("admin.movies.form.buttom"), class: "btn btn-primary add" %>
-      </td>
-    </tr>
+    <%= f.submit yield(:button_text), class: "btn btn-primary add" %>
   <% end %>
-</table>
+</div>
+
