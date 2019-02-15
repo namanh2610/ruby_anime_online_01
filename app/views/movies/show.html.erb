@@ -1,0 +1,123 @@
+<% provide :title, @movie.name %>
+
+<div class="detail_frame">
+  <div class="content_detail_left">
+    <div class="content_detail_left_1">
+      <div class="detail_frame_content1">
+        <%= image_tag @movie.images.sample.image, class: "logo_detail" %>
+      </div>
+      <div class="detail_frame_content2">
+        <p><%= @movie.name %></p>
+        <div class="detail_text_1">
+          <div class="detail_frame_kind">
+            <%= t "movie_detail.kind" %>
+          </div>
+          <div class="detail_text_kind">
+            <%= @movie.movie_types.sample.name %>
+          </div>
+        </div>
+        <div class="detail_block_1"></div>
+        <div class="detail_text_2">
+          <div class="detail_frame_kind">
+            <%= t "movie_detail.episodes" %>
+          </div>
+          <div class="detail_text_kind">
+            <%= @movie.episodes.count.to_s + "/" + @movie.total_episodes.to_s %>
+          </div>
+        </div>
+        <div class="detail_block_1"></div>
+        <div class="detail_text_2">
+          <div class="detail_frame_kind">
+            <%= t "movie_detail.status" %>
+          </div>
+          <div class="detail_text_kind">
+            <%= @movie.select_status %>
+          </div>
+        </div>
+        <div class="detail_block_1"></div>
+        <div class="detail_text_2">
+          <div class="detail_frame_kind">
+            <%= t "movie_detail.projecting_date" %>
+          </div>
+          <div class="detail_text_kind">
+              <%= @movie.updated_at %>
+          </div>
+        </div>
+        <%= link_to "#" do %>
+          <div class="detail_movie_link">
+            <div class="detail_text_movie_link">
+              <%= t "movie_detail.movie_link" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="content_detail_left_2">
+      <div class="detail_frame_text_2">
+        <p><%= @movie.name %></p>
+        <div class="detail_content_movie_text"><%= @movie.content %></div>
+      </div>
+    </div>
+  </div>
+  <div class="content_detail_right">
+    <div class="content_detail_right_1">
+      <div class="comtent_home_2">
+      <div class="content_home_text_2">
+          <%= t("home.new_category") %>
+        </div>
+      </div>
+      <div class="content_home_frame_item_2">
+        <div class="content_home_item_2">
+           <div>
+            <%= link_to image_tag("d1.jpg", class: "link_home_image_item_2"), "#"%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.school" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d2.jpg", class: "link_home_image_item_2"), "#"%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.loli" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d3.jpg", class: "link_home_image_item_2"), "#"%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.romantic" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d4.jpg", class: "link_home_image_item_2"), "#"%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.horror" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d5.jpg", class: "link_home_image_item_2"), "#"%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.adventure" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d6.jpg", class: "link_home_image_item_2"), "#"%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.action" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

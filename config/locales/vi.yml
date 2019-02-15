@@ -48,3 +48,10 @@ vi:
     anime_series: "Anime dài tập"
     new_category: "Thể loại mới"
     anime_updated: "Anime mới cập nhật"
+  movie_detail:
+    kind: "Thể loại "
+    episodes: "Số tập"
+    projecting_date: "Ngày chiếu"
+    movie_link: "Xem phim"
+    status: "Trạng thái"
+    error: "Không tồn tại"
