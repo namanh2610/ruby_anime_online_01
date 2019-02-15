@@ -804,3 +804,31 @@ ul.menu_footer li{
   min-height: 500px;
   background: $color_light_gray;
 }
+
+/*movie type*/
+.content_movie_type_left{
+  float: left;
+  width: 75%;
+  height: 1110px;
+}
+.movie_type_frame{
+  background: $color_light_gray;
+  width: 100%;
+  height: 1110px;
+}
+.pagination{
+  margin: 10px 50px !important;
+}
+.movie_type_text{
+  color: $color_blue_sky;
+  font-size: 25px;
+  font-weight: bold;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  border-bottom: solid 1px white;
+}
+.movie_type_frame_content{
+  width: 100%;
+  height: 1010px;
+}
