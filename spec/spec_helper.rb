@@ -1,6 +1,5 @@
 require "capybara/rspec"
 
-o/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 
   config.expect_with :rspec do |expectations|
