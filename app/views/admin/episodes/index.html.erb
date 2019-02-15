@@ -1,0 +1,54 @@
+<div class="listfilm_frame">
+  <p class="title">
+    <%= t "admin.episodes.index.list_episode" %>
+  </p>
+  <div class="list">
+    <table class="table table-bordered table-dark table-responsive">
+      <thead class= "thead-dark">
+        <tr>
+          <th scope="col"><%= t "admin.episodes.index.name_movie" %></th>
+          <th scope="col"><%= t "admin.episodes.index.episode" %></th>
+          <th scope="col"><%= t "admin.episodes.index.link" %></th>
+          <th scope="col"><%= t "admin.episodes.index.status" %></th>
+          <th scope="col"><%= t "admin.episodes.index.setting" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @episodes.each do |episode| %>
+          <tr>
+            <th scope="col" class="set_padding">
+              <%= episode.movie.name %>
+            </th>
+            <th scope="col" class="set_padding">
+              <%= episode.name %>
+            </th>
+            <th scope="col" class="set_padding">
+              <%= episode.url %>
+            </th>
+            <% if episode.status %>
+              <th scope="col " class="set_padding">
+                <button type="button" class="btn btn-success">
+                  <%= t "admin.movies.index.actived"%>
+                </button>
+              </th>
+            <% else %>
+              <th scope="col " class="set_padding">
+                <button type="button" class="btn btn-danger">
+                  <%= t "admin.movies.index.not_actived"%>
+                </button>
+              </th>
+            <% end %>
+            <th scope="col">
+              <%= link_to t("admin.movies.index.add"), admin_update_episode_path(id: episode.id), class: "btn btn-primary set_bot",method: :patch %>
+              <br><br>
+              <%= link_to t("admin.movies.index.delete"), admin_episode_path(id: episode.id), class: "btn btn-primary btn-danger set_bot", method: :delete, data: { confirm: "You sure?"} %>
+            </th>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="paging">
+      <%= paginate @episodes,theme: "twitter-bootstrap-3", window: 3 %>
+    </div>
+  </div>
+</div>

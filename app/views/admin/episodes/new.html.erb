@@ -1,0 +1,32 @@
+<% provide :button_text, t("admin.episodes.new.add_episode") %>
+<div class="content_episodes">
+  <div class="left_episodes">
+    <div>
+      <%= link_to image_tag(@movie.images.sample.image.url, class: "image_movies"), "#" %>
+    </div>
+    <div class="content_movies">
+      <p class="set_text_episodes">
+        <%= t "admin.episodes.new.name" %><%= @movie.name %>
+      </p>
+      <p class="set_text_episodes">
+        <%= t "admin.episodes.new.total" %>
+        <%= @movie.total_episodes %>
+      </p>
+    </div>
+    <div class="number_episodes">
+      <div class="name_episode">
+        <p>
+          <%= t "admin.episodes.new.name_episode" %>
+        </p>
+      </div>
+      <% @movie.episodes.all.each do |episode| %>
+        <div class="set_name_episode">
+          <%= link_to episode.name, edit_admin_episode_path(id: episode.id), class: "btn btn-primary btn-danger" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="right_episodes">
+    <%= render "form" %>
+  </div>
+</div>

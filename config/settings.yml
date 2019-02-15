@@ -36,3 +36,6 @@ movie:
 producer:
   max_name: 255
   max_email: 255
+episode:
+  max_name: 255
+  max_link: 1000

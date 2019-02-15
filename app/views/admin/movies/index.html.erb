@@ -2,8 +2,6 @@
   <p class="title">
     <%= t "admin.movies.index.list_film" %>
   </p>
-  <div class="set_button">
-  </div>
   <div class="list">
     <table class="table table-bordered table-dark table-responsive">
       <thead class= "thead-dark">
@@ -42,10 +40,16 @@
               </th>
             <% end %>
             <th scope="col" class="set_padding">
-              <%= t "admin.movies.index.admin"%>
+              <%= t "admin.movies.index.admin" %>
             </th>
-            <th scope="col" class="set_padding">
-              <%= link_to t("admin.movies.index.add"), admin_update_movie_path(id: movie.id), class: "btn btn-primary", method: :patch %>
+            <th scope="col" style="width: 200px;">
+              <%= link_to t("admin.movies.index.add"), admin_update_movie_path(id: movie.id), class: "btn btn-primary set_bot", method: :patch %>
+              <%= link_to "Edit", edit_admin_movie_path(id: movie.id), class: "btn btn-primary set_bot"%>
+              <%= link_to "Delete", admin_movie_path(id: movie.id), class: "btn btn-primary btn-danger set_bot", method: :delete, data: { confirm: "You sure?"} %>
+              <br><br>
+              <% if movie.status %>
+                <%= link_to t("admin.movies.index.button"), admin_create_eipsode_path(id: movie.id), class: "btn btn-primary" %>
+              <% end %>
             </th>
           </tr>
         <% end %>

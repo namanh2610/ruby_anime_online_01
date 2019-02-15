@@ -7,15 +7,15 @@ class Movie < ApplicationRecord
   validates :total_episodes, presence: true, numericality: {only_integer: true}
 
   belongs_to :user
-  has_many :movie_objects
+  has_many :movie_objects, dependent: :destroy
   has_many :comment_objects, as: :commentable
-  has_many :producers
-  has_many :images
-  has_many :episodes
+  has_many :producers, dependent: :destroy
+  has_many :images, dependent: :destroy
+  has_many :episodes, dependent: :destroy
   has_many :movie_types, through: :movie_objects
   accepts_nested_attributes_for :images
   accepts_nested_attributes_for :producers
-  mount_uploader :image, PictureUploader
+  accepts_nested_attributes_for :movie_objects
 
   scope :oder_name, ->{order name: :ASC}
   scope :select_movie, ->{select :id, :name, :content}

@@ -1,0 +1,37 @@
+<% provide :title, t("users.new.registration") %>
+
+<div class="new_user_frame">
+  <br/>
+  <h2><%= t "users.new.registration" %></h2>
+  <%= form_for :user, url: users_path do |f| %>
+    <div class="login_frame_text_left">
+      <div class="login_text_1">
+        <%= f.label :first_name, t("users.new.first_name") %>
+      </div>
+      <div class="login_text_2">
+        <%= f.label :last_name, t("users.new.last_name") %>
+      </div>
+      <div class="login_text_3">
+        <%= f.label :account, t("users.new.account") %>
+      </div>
+      <div class="login_text_4">
+        <%= f.label :password, t("users.new.password") %>
+      </div>
+      <div class="login_text_4">
+        <%= f.label :password, t("users.new.password_confirmation") %>
+      </div>
+      <div class="login_text_4">
+        <%= f.label :password, t("users.new.email") %>
+      </div>
+    </div>
+    <div class="login_frame_text_right">
+      <%= f.text_field :first_name, class: "login_input_text_1", size: 30 %>
+      <%= f.text_field :last_name, class: "login_input_text_2", size: 30 %>
+      <%= f.text_field :account, class: "login_input_text_2", size: 30 %>
+      <%= f.password_field :password, class: "login_input_text_2", size: 30 %>
+      <%= f.password_field :password_confirmation, class: "login_input_text_2", size: 30 %>
+      <%= f.text_field :email, class: "login_input_text_2", size: 30 %>
+    </div>
+    <%= f.submit t "users.new.submit", class: "login_button_login" %>
+  <% end %>
+</div>

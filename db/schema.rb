@@ -29,8 +29,9 @@ ActiveRecord::Schema.define(version: 2019_02_27_101849) do
   end
 
   create_table "episodes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "url"
-    t.boolean "status"
+    t.string "name"
+    t.text "url"
+    t.boolean "status", default: false
     t.integer "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -86,7 +87,7 @@ ActiveRecord::Schema.define(version: 2019_02_27_101849) do
     t.string "email"
     t.string "account"
     t.string "password_digest"
-    t.string "user_role_id"
+    t.string "user_role_id", default: "3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "remember_digest"

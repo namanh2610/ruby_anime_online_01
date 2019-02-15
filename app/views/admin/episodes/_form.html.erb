@@ -1,0 +1,11 @@
+<%= form_with model: [:admin, @episode], class: "col-2", local: true do |f| %>
+  <%= f.label :name, t("admin.episodes.form.name"), class: "set_lable_episodes" %>
+  <%= f.text_field :name, class: "form-control" %></br>
+
+  <%= f. hidden_field :movie_id ,:value => params[:id] %>
+
+  <%= f.label :url, t("admin.episodes.form.link_episode"), class: "set_lable_episodes" %>
+  <%= f.text_area :url, class: "form-control md-textarea",rows: "4" %></br>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary set_buttom_episodes" %>
+<% end %>
