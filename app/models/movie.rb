@@ -1,5 +1,5 @@
 class Movie < ApplicationRecord
-  MOVIE_TYPE = %w(new update series).freeze
+  MOVIE_TYPE = %w(new update).freeze
   YEAR = %w(0 1 2 3 4 5).freeze
 
   validates :name, presence: true, length: {maximum: Settings.movie.max_name}
@@ -17,11 +17,13 @@ class Movie < ApplicationRecord
   accepts_nested_attributes_for :producers
   mount_uploader :image, PictureUploader
 
-  scope :oder_name, ->{order name: :ASC}
-  scope :select_movie, ->{select :id, :name, :content}
-  scope :select_detail, ->{select :id, :name, :content, :total_episodes, :updated_at}
-  scope :where_movie_year, ->(id, type){where "extract(year from created_at)#{type}?", id}
-  scope :where_movie_status, ->{where "status = '1'"}
+  scope :sort_date, ->{order created_at: :DESC}
+  scope :movie_properties, ->{select :id, :name, :content, :created_at}
+  scope :detail_properties, ->{select :id, :name, :content, :total_episodes, :updated_at}
+  scope :get_movie_by_year, ->(year, compare){where "extract(year from created_at)#{compare}?", year}
+  scope :get_movie_by_total_episode, ->{where "total_episodes > '#{Settings.total_episode}'"}
+  scope :check_status_movie, ->{where "status = '#{Settings.status}'"}
+  scope :search_movie_by_name, ->(name){where "name LIKE '#{name}%' or name LIKE '%#{name}%' or name LIKE '%#{name}'"}
 
   def select_status
     episodes.count == total_episodes ? I18n.t("movie_detail.finish") : I18n.t("movie_detail.unfinished")

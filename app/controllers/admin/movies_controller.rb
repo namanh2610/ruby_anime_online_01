@@ -10,23 +10,21 @@ class Admin::MoviesController < ApplicationController
 
   def create
     @movie = current_user.movies.build(movie_params)
-
     if @movie.save
       flash[:success] = t "admin.movies.create.success"
       redirect_to admin_movies_path
     else
-      flash.now[:danger] = t "admin.movies.create.dagner"
+      flash.now[:danger] = t "admin.movies.create.danger"
       render :new
     end
   end
 
   def index
-    @movies = Movie.page(params[:page]).per Settings.admin.movies.index.number_page
+    @movies = Movie.sort_date.page(params[:page]).per Settings.admin.movies.index.number_page
   end
 
   def update_movie
     @movie = Movie.find_by id: params[:id]
-
     if @movie.status == false
       @movie.update status: true
       flash[:success] = t "admin.movies.update_movie.success"

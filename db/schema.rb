@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_02_27_101849) do
     t.string "url"
     t.boolean "status"
     t.integer "movie_id"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
