@@ -15,6 +15,7 @@ class Movie < ApplicationRecord
   has_many :movie_types, through: :movie_objects
   accepts_nested_attributes_for :images
   accepts_nested_attributes_for :producers
+  accepts_nested_attributes_for :movie_objects
   mount_uploader :image, PictureUploader
 
   scope :sort_date, ->{order created_at: :DESC}

@@ -1,18 +1,21 @@
 class Admin::MoviesController < ApplicationController
   before_action :logged_in_admin, only: %i(index create new)
+  before_action :list_movie_type, only: %i(create new)
+
   layout "admin"
 
   def new
     @movie = Movie.new
     @movie.images.build
     @movie.producers.build
+    @movie.movie_objects.build
   end
 
   def create
     @movie = current_user.movies.build(movie_params)
     if @movie.save
-      flash[:success] = t "admin.movies.create.success"
-      redirect_to admin_movies_path
+      flash.now[:success] = t "admin.movies.create.success"
+      redirect_to admin_index_path
     else
       flash.now[:danger] = t "admin.movies.create.danger"
       render :new
@@ -34,11 +37,15 @@ class Admin::MoviesController < ApplicationController
     redirect_to admin_index_path
   end
 
+  def list_movie_type
+    @list = MovieType.all.map{|e| [e.name, e.id]}
+  end
+
   private
 
   def movie_params
     params.require(:movie)
-          .permit :name, :content, :total_episodes, images_attributes: [:image], producers_attributes: [:name, :email]
+          .permit :name, :content, :total_episodes, images_attributes: [:image], producers_attributes: [:name, :email], movie_objects_attributes: [:movie_type_id]
   end
 
   def logged_in_admin

@@ -71,7 +71,7 @@ vi:
     account_management: "Tài khoản"
     movie_management: "Phim"
     add_movie: "Thêm phim"
-    add_episode: "Thêm tập"
+    add_episode: "Danh sách tập"
   sessions:
     login_fail:
       danger: "Sai tên tài khoản hoặc mật khẩu"
@@ -91,6 +91,7 @@ vi:
         not_actived: "Chưa xác nhận"
         admin: "QT viên"
         add: "Thêm"
+        button: "Thêm tập"
       update_movie:
         success: "Thêm thành công!"
         danger: "Không được thêm!"
@@ -108,6 +109,29 @@ vi:
       create:
         success: "Thêm thành công"
         danger: "Không thể thêm"
+    episodes:
+      create:
+        success: "Thêm thành công"
+        danger: "Không thể thêm"
+      update_episode:
+        success: "Thêm thành công"
+        danger: "Không thể thêm"
+      new:
+        name: "Tên: "
+        total: "Số tập: "
+        name_episode: "Tập"
+      index:
+        list_episode: "DANH SÁCH TÂP"
+        name_movie: "Tên phim"
+        episode: "Tập"
+        link: "Link phim"
+        status: "Trạng thái"
+        setting: "Cài đặt"
+        delete: "Xóa"
+      form:
+        name: "Tên"
+        link_episode: "Link Tập"
+        add_episode: "Thêm tập"
   movie_type:
     error: "Không tồn tại"
     type: "Thể loại: "

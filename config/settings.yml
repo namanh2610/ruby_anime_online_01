@@ -44,3 +44,6 @@ watch_movie:
   split_share: "/"
   split_ask: "?"
   url: "//ok.ru/videoembed/"
+episode:
+  max_name: 255
+  max_link: 1000

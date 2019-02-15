@@ -859,12 +859,11 @@ ul.menu_footer li{
   }
 }
 .title{
-  float: left;
   width: 400px;
   color: white;
   font-size: 30px;
   margin-top: 35px;
-  margin-left: 40%;
+  margin-left: 45%;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -886,7 +885,7 @@ ul.menu_footer li{
 .frame_add_movies{
   border: solid 1px;
   margin-top: 5px;
-  min-height: 400px;
+  min-height: 600px;
   background: $color_light_gray;
   margin-bottom: -5px;
 }
@@ -898,24 +897,117 @@ ul.menu_footer li{
   margin: 40px auto;
   width: 90%;
 }
-.set_padding{
-  padding-top: 15px;
+.form_add_film{
+  width: 80%;
+  min-height: 600px;
+  margin-left: 100px;
 }
-.set_up_picture{
-  padding-left: 207px;
-  padding-top: 15px
+.set_margin{
+  min-height: 60px;
+}
+.set_margin_textarea{
+  min-height: 115px;
+}
+.set_lable{
+  color: white;
+  font-size: 15px;
+  float: left;
+  width: 200px;
+  padding-left: 50px;
+}
+.set_field{
+  float: left;
+  width: 600px;
 }
 .add{
   margin-left: 45%;
+  margin-bottom: 30px;
 }
-.set_td1{
-  width: 200px;
+/* episodes */
+
+.content_episodes{
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px $color_transparent_black_2;
+  border: solid 1px;
+  margin-top: 5px;
+  min-height: 600px;
+  background: $color_light_gray;
 }
-.set_td2{
-  width: 700px;
+.left_episodes{
+
+  float: left;
+  width: 350px;
+  min-height: 400px;
+  box-shadow: 1px 1px 1px 1px $color_transparent_black_2;
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-top: 15px;
 }
-.set_content{
-  padding: 15px 13px
+.right_episodes{
+  float: left;
+  width: 625px;
+  min-height: 400px;
+  box-shadow: 1px 1px 1px 1px $color_transparent_black_2;
+  margin-top: 15px;
+}
+.image_movies{
+  width: 150px;
+  height: 200px;
+  float: left;
+  margin-top: 15px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px 1px $color_transparent_black_2;
+}
+.content_movies{
+  box-shadow: 1px 1px 1px 1px $color_transparent_black_2;
+  float: left;
+  width: 185px;
+  min-height: 200px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+.set_text_episodes{
+  color: white;
+  padding-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.number_episodes{
+  float: left;
+  width: 250px;
+  min-height: 200px;
+  margin-left: 50px ;
+  margin-top: 10px;
+}
+.set_lable_episodes{
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+}
+.set_buttom_episodes{
+  margin-left: 260px;
+}
+.set_name_episode{
+  color: white;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-top: 15px;
+  float: left;
+}
+.name_episode{
+  width: 150px;
+  height: 40px;
+  margin-left: 30px;
+  border: 1px solid white;
+  p{
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 20px;
+  }
 }
 
 /* watch movie */

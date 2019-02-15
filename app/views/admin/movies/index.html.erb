@@ -2,8 +2,6 @@
   <p class="title">
     <%= t "admin.movies.index.list_film" %>
   </p>
-  <div class="set_button">
-  </div>
   <div class="list">
     <table class="table table-bordered table-dark table-responsive">
       <thead class= "thead-dark">
@@ -20,7 +18,7 @@
         <% @movies.each do |movie| %>
           <tr>
             <th scope="col">
-              <%= link_to image_tag(movie.images.sample.image.url, class: "size_image"), "#" %>
+              <%= link_to image_tag("", class: "size_image"), "#" %>
             </th>
             <th scope="col" class="set_padding">
               <%= movie.name %>
@@ -42,10 +40,14 @@
               </th>
             <% end %>
             <th scope="col" class="set_padding">
-              <%= t "admin.movies.index.admin"%>
+              <%= t "admin.movies.index.admin" %>
             </th>
-            <th scope="col" class="set_padding">
-              <%= link_to t("admin.movies.index.add"), admin_update_movie_path(id: movie.id), class: "btn btn-primary", method: :patch %>
+            <th scope="col">
+              <%= link_to t("admin.movies.index.add"), admin_update_movie_path(id: movie.id), class: "btn btn-primary set_bot", method: :patch %>
+              <br><br>
+              <% if movie.status %>
+                <%= link_to t("admin.movies.index.button"), admin_create_eipsode_path(id: movie.id), class: "btn btn-primary" %>
+              <% end %>
             </th>
           </tr>
         <% end %>

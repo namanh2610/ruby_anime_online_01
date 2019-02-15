@@ -10,7 +10,10 @@ Rails.application.routes.draw do
       get "/index", to: "movies#index"
       patch "/update_movie/:id", to: "movies#update_movie", as: "update_movie"
       get "/movie/new", to: "movies#new", as: "create_movie"
+      get "/admin/episodes/new/:id", to: "episodes#new", as: "create_eipsode"
+      patch "/admin/episodes/:id", to: "episodes#update_episode", as: "update_episode"
       resources :movies
+      resources :episodes
     end
     resources :movie_types
     resources :movie_type_years

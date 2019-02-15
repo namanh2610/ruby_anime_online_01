@@ -1,6 +1,6 @@
 <div class="content_frame">
   <div class="language_frame">
-    <%= link_to current_user.account , "#", class: "link_login" %>
+    <%= link_to current_user.account , admin_movies_path, class: "link_login" %>
     <i class="fa fa-qq" id=logo_login></i>
     <%= link_to t("header_admin.link_logout"), logout_path, method: :delete, class: "link_login" %>
     <div class="content_language">
@@ -39,7 +39,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <%= link_to t("header_admin.add_episode"), "#", class: "link_menu_1" %>
+                    <%= link_to t("header_admin.add_episode"), admin_episodes_path, class: "link_menu_1" %>
                   </td>
                 </tr>
               </table>

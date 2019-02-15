@@ -72,7 +72,7 @@ en:
     account_management: "Accounts"
     movie_management: "Movies"
     add_movie: "Add movies"
-    add_episode: "Add episodes"
+    add_episode: "List episodes"
   sessions:
     login_fail:
       danger: "Invalid email/password combination"
@@ -92,6 +92,7 @@ en:
         not_actived: "Not Actived"
         admin: "Admin"
         add: "Add"
+        button: "Add Episodes"
       update_movie:
         success: "Add complete!"
         danger: "Cant add!"
@@ -108,7 +109,30 @@ en:
         add_film: "ADD FILM"
       create:
         success: "Add complete"
-        danger: "Can add"
+        danger: "Can't add"
+    episodes:
+      create:
+        success: "Add complete"
+        danger: "Can't add"
+      update_episode:
+        success: "Add complete"
+        danger: "Can't add"
+      new:
+        name: "Name: "
+        total: "Total Episode: "
+        name_episode: "Name Episode"
+      index:
+        list_episode: "LIST EPISODES"
+        name_movie: "Name Movie"
+        episode: "Episode"
+        link: "Link"
+        status: "Status"
+        setting: "Settings"
+        delete: "Delete"
+      form:
+        name: "Name"
+        link_episode: "Link Episode"
+        add_episode: "Add episode"
   movie_type:
     error: "Does not exist"
     type: "Movie type: "
