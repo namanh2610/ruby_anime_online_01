@@ -20,6 +20,10 @@ module SessionsHelper
     current_user.present?
   end
 
+  def check_user
+    return true if logged_in? && current_user.user_role.role == Settings.sessions.check_login.user
+  end
+
   def remember user
     user.remember
     cookies.permanent.signed[:user_id] = user.id

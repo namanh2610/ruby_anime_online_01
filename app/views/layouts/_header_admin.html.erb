@@ -19,13 +19,6 @@
         <li>
           <div class="link_menu">
             <p>
-              <%= link_to t("header.home"), root_path, class: "link_menu_content" %>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="link_menu">
-            <p>
               <%= link_to t("header_admin.account_management"), "#", class: "link_menu_content" %>
             </p>
           </div>
@@ -41,7 +34,7 @@
               <table>
                 <tr>
                   <td>
-                    <%= link_to t("header_admin.add_movie"), "#", class: "link_menu_1" %>
+                    <%= link_to t("header_admin.add_movie"),  admin_create_movie_path, class: "link_menu_1" %>
                   </td>
                 </tr>
                 <tr>

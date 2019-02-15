@@ -9,7 +9,7 @@
       <div class="movie_type_frame_content">
         <% @movie.each do |movie| %>
           <div class="content_home_item_1">
-            <%= link_to image_tag(get_link_image(movie.images.sample.image), class: "image_item_1"), movie_path(movie) %>
+            <%= link_to image_tag(movie.images.sample.image.url, class: "image_item_1"), movie_path(movie) %>
             <div class="frame_item_text_1">
               <div class="item_text_1">
                 <%= movie.name%>

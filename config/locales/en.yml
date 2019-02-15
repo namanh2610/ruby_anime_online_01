@@ -76,9 +76,40 @@ en:
     login_fail:
       danger: "Invalid email/password combination"
   admin:
-    admins:
+    movies:
       logged_in_admin:
         danger: "Please login"
+      index:
+        list_film: "LIST FILM"
+        image: "Image"
+        name: "Name"
+        episode: "Total episodes"
+        status: "Status"
+        user: "User"
+        settings: "Settings"
+        actived: "Actived"
+        not_actived: "Not Actived"
+        admin: "Admin"
+        add: "Add"
+      update_movie:
+        success: "Add complete!"
+        danger: "Cant add!"
+      form:
+        name: "Name"
+        content: "Content"
+        total_episodes: "Total Episodes"
+        image: "Image"
+        producer_name: "Producer Name"
+        producer_email: "Producer Email"
+        email: "abc@gmail.com"
+        buttom: "Add Film"
+      new:
+        add_film: "ADD FILM"
+      create:
+        success: "Add complete"
+        danger: "Can add"
   movie_type:
     error: "Does not exist"
     type: "Movie type: "
+
+

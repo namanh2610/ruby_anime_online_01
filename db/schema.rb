@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_20_083437) do
+ActiveRecord::Schema.define(version: 2019_02_27_101849) do
 
   create_table "comment_objects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "comment_id"
@@ -58,9 +58,9 @@ ActiveRecord::Schema.define(version: 2019_02_20_083437) do
 
   create_table "movies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
-    t.string "content"
+    t.text "content"
     t.integer "total_episodes"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 2019_02_20_083437) do
     t.string "user_role_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "remember_digest"
   end
 
 end

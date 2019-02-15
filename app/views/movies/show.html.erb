@@ -4,7 +4,7 @@
   <div class="content_detail_left">
     <div class="content_detail_left_1">
       <div class="detail_frame_content1">
-        <%= link_to image_tag get_link_image(@movie.images.sample.image), class: "logo_detail" %>
+        <%= link_to image_tag @movie.images.sample.image.url, class: "logo_detail" %>
       </div>
       <div class="detail_frame_content2">
         <p><%= @movie.name %></p>

@@ -5,11 +5,13 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    resources :movies
+    resources :movies, only: [:show]
     resources :user
     namespace :admin do
-      get "/show", to: "admins#show"
-      resources :admins
+      get "/index", to: "movies#index"
+      patch "/update_movie/:id", to: "movies#update_movie", as: "update_movie"
+      get "/movie/new", to: "movies#new", as: "create_movie"
+      resources :movies
     end
     resources :movie_types
     resources :movie_type_years
