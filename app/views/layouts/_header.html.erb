@@ -1,0 +1,250 @@
+<div class="content_frame">
+  <div class="language_frame">
+    <%= link_to t("header.link_login"), "#", class: "link_login" %>
+    <i class="fa fa-qq" id=logo_login></i>
+    <div class="content_language">
+      <%= t"header.language" %>
+      <%= link_to image_tag("en.png", class: "logo_laguage"),
+            locale: "en" %>
+      <%= t"header.or" %>
+      <%= link_to image_tag("vi.jpg", class: "logo_laguage"),
+            locale: "vi" %>
+    </div>
+  </div>
+  <div class="nav_frame">
+    <div class="nav_big">
+      <div class="logo">
+
+      </div>
+      <ul class="menu">
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header.home"), "#", class: "link_menu_content" %>
+            </p>
+          </div>
+        </li>
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header.movie_genre"), "#", class: "link_menu_content" %>
+            </p>
+          </div>
+          <ul class="menu_movie_genre">
+            <li >
+              <table>
+                <tr>
+                  <td>
+                    <%= link_to t("header.ordinary_life"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.music"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.mentality"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.martial_arts"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.history"), "#", class: "link_menu_2" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "Loli", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.school"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.romantic"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to "Harent", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to "Ecchi", "#", class: "link_menu_2" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to t("header.action"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.adventure"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to "Fantasy", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.humor"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.army"), "#", class: "link_menu_2" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to t("header.game"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.sport"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to "Samurai", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.supernatural"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.officer"), "#", class: "link_menu_2" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to t("header.fiction"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.mystery"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.magic"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.space"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.super_power"), "#", class: "link_menu_2" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "Drama", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to "Parody", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to "Dementia", "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.horror"), "#", class: "link_menu_2" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.vampire"), "#", class: "link_menu_2" %>
+                  </td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header.movies_by_year"), "#", class: "link_menu_content" %>
+            </p>
+          </div>
+          <ul>
+            <li>
+              <table style="width: 168px;  margin-left: -10px;">
+                <tr>
+                  <td>
+                    <%= link_to "2019", "#", class: "link_menu_1" %>
+                  </td>
+                  <td>
+                    <%= link_to "2018", "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "2017", "#", class: "link_menu_1" %>
+                  </td>
+                  <td>
+                    <%= link_to "2016", "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to "2015", "#", class: "link_menu_1" %>
+                  </td>
+                  <td>
+                    <%= link_to t("header.old"), "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div class="link_menu">
+            <p>
+              <%= link_to t("header.movies_by_year"), "#", class: "link_menu_content" %>
+            </p>
+          </div>
+          <ul>
+            <li>
+              <table style="width: 168px;  margin-left: -10px;">
+                <tr>
+                  <td>
+                    <%= link_to t("header.add_movie"), "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <%= link_to t("header.add_the_episode"), "#", class: "link_menu_1" %>
+                  </td>
+                </tr>
+              </table>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="search_frame">
+         <input type="text" value="" size="30" class="search_text" />
+         <button type="button" class="button_search"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+    <div class="nav_small">
+      <ul class="link_menu_small">
+        <li>
+          <a href="#" onclick="return false" >
+            <div class="link_menu_logo">
+              <i class="fa fa-reorder"></i>
+            </div>
+          </a>
+          <ul class="menu_small_1">
+            <li>
+              <div class="link_menu">
+                <p>
+                  <%= link_to t("header.home"), "#", class: "link_menu_content" %>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="link_menu">
+                <p>
+                  <%= link_to t("header.movie_genre"), "#", class: "link_menu_content" %>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="link_menu">
+                <p>
+                  <%= link_to t("header.movies_by_year"), "#", class: "link_menu_content" %>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="logo">
+
+      </div>
+      <div class="search_frame">
+         <input type="text" value="" size="30" class="search_text" />
+         <button type="button" class="button_search"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
