@@ -375,7 +375,47 @@
   }
 }
 
-
-
-
-
+/* footer */
+.footer_frame{
+  width: 100%;
+  margin-top: 7px;
+  min-height: 150px;
+  background: rgba(72, 75, 81, 0.5);
+}
+ul.menu_footer{
+  width: 100%;
+  min-height: 65px;
+  text-align: center;
+}
+ul.menu_footer li{
+  height: 55px;
+  width: 150px;
+  margin-top: 20px;
+   display: inline-block;
+   &:hover ul{
+    display: block;
+  }
+}
+.logo_footer{
+  width: 170px;
+  height: 55px;
+  margin: 20px 45% 0 45%;
+  float: left;
+  border: solid 1px white;
+}
+.content_frame_footer{
+    clear: both;
+    width: 88%;
+    min-height: 150px;
+    background: $color_light_gray;
+    margin: auto;
+}
+.contact{
+  margin-left: 5%;
+  padding-bottom: 10px;
+  p{
+    text-align: center;
+    color: white;
+    font-size: 13px;
+  }
+}

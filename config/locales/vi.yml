@@ -31,3 +31,10 @@ vi:
     vampire: "Ma cà rồng"
     add_movie: "Thêm phim"
     add_the_episode: "Thêm tập phim"
+  footer:
+    action: "Hành động"
+    fantasy: "Fantasy"
+    magic: "Phép thuật"
+    contact: "Liên hệ với chúng tôi: "
+    email: "Hoangnamanh2610@gmail.com"
+    phone: "Số điện thoại: 123456789"

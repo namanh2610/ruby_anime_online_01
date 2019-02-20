@@ -31,3 +31,10 @@ en:
     vampire: "Vampire"
     add_movie: "Add movie"
     add_the_episode: "Add the episode"
+  footer:
+    action: "Action"
+    fantasy: "Fantasy"
+    magic: "Magic"
+    contact: "Contact us: "
+    email: "Hoangnamanh2610@gmail.com"
+    phone: "Phone number: 123456789"
