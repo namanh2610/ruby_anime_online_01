@@ -3,11 +3,29 @@
 .body{
   background: $color_body;
 }
+.content{
+  width: 80%;
+  margin: 5px auto;
+  min-height: 70px;
+}
+.footer_frame{
+  width: 100%;
+  margin-top: 7px;
+  min-height: 150px;
+  clear: both;
+  background: rgba(72, 75, 81, 0.5);
+}
+.body_block{
+  width: 100%;
+  height: 2px;
+    clear: both;
+}
+
+/* header */
 .logo_laguage{
   width: 28px;
   height: 17px;
 }
-/* header */
 .content_frame{
   width: 100%;
   height: 75px;
@@ -60,33 +78,182 @@
   }
 }
 
-.content{
-  width: 80%;
-  margin: 5px auto;
-  min-height: 70px;
-}
+/* home */
 .content_home_left{
   float: left;
   width: 75%;
-  min-height: 500px;
 }
 .content_home_left_1{
   width: 100%;
-  min-height: 500px;
+  height: 1565px;
   background: $color_light_gray;
 }
 .content_home_left_2{
   width: 100%;
   margin-top: 10px;
-  min-height: 150px;
+  height: 300px;
   background: $color_light_gray;
+}
+.comtent_home_1{
+  width: 95%;
+  margin: auto;
+  color: $color_blue_sky;
+}
+.content_home_text_1{
+  float: left;
+  font-size: 22px;
+}
+.content_home_link{
+  float: right;
+  font-size: 17px;
+  margin-top: 8px;
+  .home_link{
+    color: $color_blue_sky;
+    &:hover{
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+.content_home_frame_block{
+  width: 95%;
+  margin: auto;
+  height: 1px;
+  background: white;
+  clear: both;
+}
+.content_home_frame_item_1{
+  width: 98%;
+  margin: auto;
+}
+.content_home_item_1{
+  width: 166px;
+  height: 232px;
+  box-shadow: 1px 1px 1px $color_transparent_black_2;
+  float: left;
+  margin: 20px 5px 0 17px;
+}
+.image_item_1{
+  width: 166px;
+  height: 232px;
+}
+.frame_item_text_1{
+  width: 167px;
+  height: 30px;
+  background:$color_transparent_black_1;
+  margin-top: -30px;
+  position: absolute;
+  white-space: nowrap;
+  .item_text_1{
+    color: white;
+    font-size: 16px;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    margin: 5px auto;
+  }
 }
 .content_home_right{
   float: right;
   width: 24%;
-  min-height: 660px;
+}
+.content_home_right_1{
+  width: 100%;
+  height: 1130px;
   background: $color_light_gray;
 }
+.content_home_right_2{
+  margin-top: 10px;
+  width: 100%;
+  height: 735px;
+  background: $color_light_gray;
+}
+.comtent_home_2{
+  width: 95%;
+  margin: auto;
+  color: $color_blue_sky;
+  border-bottom: solid 1px white;
+}
+.content_home_text_2{
+  margin: auto;
+  font-size: 22px;
+  text-align: center;
+}
+.content_home_frame_item_2{
+  width: 98%;
+  margin: auto;
+  .link_home_image_item_2{
+    width: 98%;
+    margin: auto;
+    height: 100px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px $color_transparent_black_2;
+  }
+}
+.content_home_item_2{
+  width: 210px;
+  height: 100px;
+  float: left;
+  margin: 20px 5px 0 17px;
+  .block{
+    clear: both;
+    font-size: 17px;
+    color: white;
+  }
+  .content_home_text_3{
+    position: absolute;
+    background: $color_transparent_black_2;
+    height: 100px;
+    width: 206px;
+    margin-top: -100px;
+    p{
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+      margin-top: 45px;
+      text-shadow: 2px 2px 2  px $color_transparent_black_2;
+    }
+  }
+}
+.image_item_2{
+  width: 90px;
+  height: 100px;
+  float: left;
+}
+.frame_item_text_2{
+  width: 100px;
+  height: 30px;
+  margin-left: 5px;
+  float: left;
+  white-space: nowrap;
+  .item_text_2{
+    width: 99%;
+    text-align: center;
+    margin: 5px auto auto 10px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $color_blue_sky;
+    text-decoration: none;
+  }
+  .item_text_2_1{
+    color: white;
+    white-space: normal;
+    font-size: 15px;
+    height: 40px;
+    width: 99%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: center;
+    margin: 15px auto auto 10px;
+    word-break: break-all;
+  }
+}
+
 @media screen and (min-width: 320px){
   /* header */
   .nav_big{
@@ -374,14 +541,7 @@
     }
   }
 }
-
 /* footer */
-.footer_frame{
-  width: 100%;
-  margin-top: 7px;
-  min-height: 150px;
-  background: rgba(72, 75, 81, 0.5);
-}
 ul.menu_footer{
   width: 100%;
   min-height: 65px;
@@ -404,8 +564,7 @@ ul.menu_footer li{
   border: solid 1px white;
 }
 .content_frame_footer{
-    clear: both;
-    width: 88%;
+    width: 80%;
     min-height: 150px;
     background: $color_light_gray;
     margin: auto;

@@ -1,4 +1,6 @@
 en:
+  application:
+    title: "Noel"
   header:
     language: "Language: "
     or: " or "
@@ -31,6 +33,7 @@ en:
     vampire: "Vampire"
     add_movie: "Add movie"
     add_the_episode: "Add the episode"
+    movie_management: "Movie manager"
   footer:
     action: "Action"
     fantasy: "Fantasy"
@@ -38,3 +41,10 @@ en:
     contact: "Contact us: "
     email: "Hoangnamanh2610@gmail.com"
     phone: "Phone number: 123456789"
+  home:
+    title_home: "Home"
+    anime_new: "Anime new"
+    see_more: "See more >>"
+    anime_series: "Anime series"
+    new_category: "New category"
+    anime_updated: "Anime updated"

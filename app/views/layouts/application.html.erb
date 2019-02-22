@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyAnimeOnline01</title>
+    <title><%= full_title yield :title %></title>
     <%= render "layouts/rails_default" %>
   </head>
 
   <body class="body">
     <%= render "layouts/header" %>
-    <div class="container">
+    <div class="content">
       <%= yield %>
     </div>
+    <div class="body_block"></div>
     <div class="footer_frame">
       <%= render "layouts/footer" %>
     </div>
