@@ -48,3 +48,10 @@ en:
     anime_series: "Anime series"
     new_category: "New category"
     anime_updated: "Anime updated"
+  movie_detail:
+    kind: "Kind"
+    episodes: "Episodes"
+    projecting_date: "Date"
+    movie_link: "Movie link"
+    status: "Status"
+    error: "Does not exist"

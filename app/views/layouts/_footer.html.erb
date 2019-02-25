@@ -1,6 +1,6 @@
 <div class="content_frame_footer">
   <div class="logo_footer">
-
+    <%= link_to image_tag("Noel.png", class: "logo_icon"), root_path %>
   </div>
   <div class="menu_footer">
     <ul class="menu_footer">
@@ -10,6 +10,7 @@
             <%= link_to t("footer.action"), "#", class: "link_menu_content" %>
           </p>
         </div>
+      </li>
       <li>
         <div class="link_menu">
           <p>
@@ -17,20 +18,20 @@
           </p>
         </div>
       </li>
-       <li>
-          <div class="link_menu">
-            <p>
-             <%= link_to t("footer.magic"), "#", class: "link_menu_content" %>
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="contact">
-      <p>
-        <%= t("footer.contact") %>
-        <%= link_to t("footer.email"), "#" , class: "link_menu_content" %>
-      </p>
-      <p><%= t("footer.phone")%></p>
-    </div>
+      <li>
+        <div class="link_menu">
+          <p>
+            <%= link_to t("footer.magic"), "#", class: "link_menu_content" %>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="contact">
+    <p>
+      <%= t("footer.contact") %>
+      <%= link_to t("footer.email"), "#" , class: "link_menu_content" %>
+    </p>
+    <p><%= t("footer.phone")%></p>
+  </div>
 </div>

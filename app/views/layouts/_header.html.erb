@@ -4,23 +4,21 @@
     <i class="fa fa-qq" id=logo_login></i>
     <div class="content_language">
       <%= t"header.language" %>
-      <%= link_to image_tag("en.png", class: "logo_laguage"),
-            locale: "en" %>
+      <%= link_to image_tag("en.png", class: "logo_laguage"), locale: "en" %>
       <%= t"header.or" %>
-      <%= link_to image_tag("vi.jpg", class: "logo_laguage"),
-            locale: "vi" %>
+      <%= link_to image_tag("vi.jpg", class: "logo_laguage"), locale: "vi" %>
     </div>
   </div>
   <div class="nav_frame">
     <div class="nav_big">
       <div class="logo">
-
+        <%= link_to image_tag("Noel.png", class: "logo_icon"), root_path %>
       </div>
       <ul class="menu">
         <li>
           <div class="link_menu">
             <p>
-              <%= link_to t("header.home"), "#", class: "link_menu_content" %>
+              <%= link_to t("header.home"), root_path, class: "link_menu_content" %>
             </p>
           </div>
         </li>
