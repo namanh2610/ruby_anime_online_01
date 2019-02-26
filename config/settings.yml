@@ -2,3 +2,15 @@ home:
   value_item_movie_new: 24
   value_item_movie_update: 9
   value_item_movie_series: 4
+sessions:
+  login_success:
+    remember: "1"
+    forget: "0"
+  check_login:
+    admin : "admin"
+    user: "user"
+user:
+  max_last_name: 255
+  max_first_name: 255
+  max_email: 255
+  min_password: 6
