@@ -11,5 +11,7 @@ Rails.application.routes.draw do
       get "/show", to: "admins#show"
       resources :admins
     end
+    resources :movie_types
+    resources :movie_type_years
   end
 end

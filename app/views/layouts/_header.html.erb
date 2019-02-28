@@ -35,108 +35,15 @@
           <ul class="menu_movie_genre">
             <li >
               <table>
-                <tr>
-                  <td>
-                    <%= link_to t("header.ordinary_life"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.music"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.mentality"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.martial_arts"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.history"), "#", class: "link_menu_2" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to "Loli", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.school"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.romantic"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to "Harent", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to "Ecchi", "#", class: "link_menu_2" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to t("header.action"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.adventure"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to "Fantasy", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.humor"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.army"), "#", class: "link_menu_2" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to t("header.game"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.sport"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to "Samurai", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.supernatural"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.officer"), "#", class: "link_menu_2" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to t("header.fiction"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.mystery"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.magic"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.space"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.super_power"), "#", class: "link_menu_2" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to "Drama", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to "Parody", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to "Dementia", "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.horror"), "#", class: "link_menu_2" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.vampire"), "#", class: "link_menu_2" %>
-                  </td>
-                </tr>
+                <% MovieType.all.in_groups_of(Settings.movie_type.value_select) do |movie| %>
+                  <tr>
+                    <% movie.each do |m| %>
+                    <td>
+                      <%= link_to m.name, movie_type_path(m.id), class: "link_menu_2" %>
+                    </td>
+                    <% end %>
+                  </tr>
+                  <% end %>
               </table>
             </li>
           </ul>
@@ -150,30 +57,17 @@
           <ul>
             <li>
               <table style="width: 168px;  margin-left: -10px;">
-                <tr>
-                  <td>
-                    <%= link_to "2019", "#", class: "link_menu_1" %>
-                  </td>
-                  <td>
-                    <%= link_to "2018", "#", class: "link_menu_1" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to "2017", "#", class: "link_menu_1" %>
-                  </td>
-                  <td>
-                    <%= link_to "2016", "#", class: "link_menu_1" %>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <%= link_to "2015", "#", class: "link_menu_1" %>
-                  </td>
-                  <td>
-                    <%= link_to t("header.old"), "#", class: "link_menu_1" %>
-                  </td>
-                </tr>
+                <% Movie::YEAR.in_groups_of(Settings.movie_type.value_select_year) do |year|%>
+                  <tr>
+                    <% year.each do |y| %>
+                      <td>
+                        <%= link_to get_year(y),
+                          movie_type_year_path(get_year(y)),
+                          class: "link_menu_1" %>
+                      </td>
+                    <% end %>
+                  </tr>
+                <% end %>
               </table>
             </li>
           </ul>

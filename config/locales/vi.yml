@@ -57,6 +57,8 @@ vi:
     movie_link: "Xem phim"
     status: "Trạng thái"
     error: "Không tồn tại"
+    finish: "Hoàn thành"
+    unfinished: "Chưa hoàn thành"
   login:
     log_in: "Đăng nhập"
     user_name: "Tên đăng nhập :"
@@ -76,3 +78,6 @@ vi:
     admins:
       logged_in_admin:
         danger: "Làm ơn đăng nhập"
+  movie_type:
+    error: "Không tồn tại"
+    type: "Thể loại: "

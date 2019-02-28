@@ -14,3 +14,15 @@ user:
   max_first_name: 255
   max_email: 255
   min_password: 6
+movie_type:
+  value_year: 2014
+  value_select: 5
+  value_item_movie: 16
+  value_select_year: 2
+header:
+  year_0: 0
+  year_1: 1
+  year_2: 2
+  year_3: 3
+  year_4: 4
+  year_5: 5

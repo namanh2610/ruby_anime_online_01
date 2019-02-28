@@ -1,0 +1,87 @@
+<% provide :title, @movie_type.name %>
+
+<div class="detail_frame">
+  <div class="content_movie_type_left">
+    <div class="movie_type_frame">
+      <div class="movie_type_text">
+        <%= t("movie_type.type") + @movie_type.name %>
+      </div>
+      <div class="movie_type_frame_content">
+        <% @movie.each do |movie| %>
+          <div class="content_home_item_1">
+            <%= link_to image_tag(get_link_image(movie.images.sample.image), class: "image_item_1"), movie_path(movie) %>
+            <div class="frame_item_text_1">
+              <div class="item_text_1">
+                <%= movie.name%>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="pagination">
+        <%= paginate @movie, theme: "twitter-bootstrap-3" %>
+      </div>
+    </div>
+  </div>
+  <div class="content_detail_right">
+    <div class="content_detail_right_1">
+      <div class="comtent_home_2">
+      <div class="content_home_text_2">
+          <%= t("home.new_category") %>
+        </div>
+      </div>
+      <div class="content_home_frame_item_2">
+        <div class="content_home_item_2">
+           <div>
+            <%= link_to image_tag("d1.jpg", class: "link_home_image_item_2"), movie_type_path(7)%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.school" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d2.jpg", class: "link_home_image_item_2"), movie_type_path(6)%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.loli" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d3.jpg", class: "link_home_image_item_2"), movie_type_path(8)%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.romantic" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d4.jpg", class: "link_home_image_item_2"), movie_type_path(29)%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.horror" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d5.jpg", class: "link_home_image_item_2"), movie_type_path(12)%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.adventure" %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <%= link_to image_tag("d6.jpg", class: "link_home_image_item_2"), movie_type_path(11)%>
+            <div class="content_home_text_3">
+              <p>
+                <%= t "header.action" %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
