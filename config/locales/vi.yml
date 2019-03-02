@@ -75,9 +75,38 @@ vi:
     login_fail:
       danger: "Sai tên tài khoản hoặc mật khẩu"
   admin:
-    admins:
+    movies:
       logged_in_admin:
         danger: "Làm ơn đăng nhập"
+      index:
+        list_film: "DANH SÁCH PHIM"
+        image: "Ảnh"
+        name: "Tên"
+        episode: "Số tập"
+        status: "Trạng thái"
+        user: "Người đăng"
+        settings: "Cài đặt"
+        actived: "Xác nhận"
+        not_actived: "Chưa xác nhận"
+        admin: "QT viên"
+        add: "Thêm"
+      update_movie:
+        success: "Thêm thành công!"
+        danger: "Không được thêm!"
+      form:
+        name: "Tên"
+        content: "Nội dung"
+        total_episodes: "Số tập"
+        image: "Ảnh"
+        producer_name: "Tên NSX"
+        producer_email: "Email NSX"
+        email: "abc@gmail.com"
+        buttom: "Thêm phim"
+      new:
+        add_film: "Thêm phim"
+      create:
+        success: "Thêm thành công"
+        danger: "Không thể thêm"
   movie_type:
     error: "Không tồn tại"
     type: "Thể loại: "

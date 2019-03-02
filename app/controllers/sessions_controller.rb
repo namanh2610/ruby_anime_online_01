@@ -32,7 +32,7 @@ class SessionsController < ApplicationController
   def check_login user
     if user.user_role.role == Settings.sessions.check_login.admin
       remember user
-      redirect_to admin_show_path
+      redirect_to admin_index_path
     elsif user.user_role.role == Settings.sessions.check_login.user
       remember user
       redirect_to root_url

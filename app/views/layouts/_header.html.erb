@@ -1,6 +1,6 @@
 <div class="content_frame">
   <div class="language_frame">
-    <% if logged_in? %>
+    <% if check_user %>
       <%= link_to current_user.account , "#", class: "link_login" %>
     <% else %>
       <%= link_to t("header.link_login"), "login", class: "link_login" %>

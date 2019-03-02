@@ -26,3 +26,13 @@ header:
   year_3: 3
   year_4: 4
   year_5: 5
+admin:
+  movies:
+    index:
+      number_page: 7
+movie:
+  max_name: 255
+  min_content: 1
+producer:
+  max_name: 255
+  max_email: 255

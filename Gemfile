@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
-ruby "2.5.3"
-
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-kaminari-views"
 gem "bootstrap-sass", ">=3.3.7"
+gem "carrierwave", "1.2.2"
 gem "coffee-rails", "~> 4.2"
 gem "config", ">= 1.7.1"
 gem "figaro", ">= 1.1.1"
@@ -14,6 +13,7 @@ gem "font-awesome-sass", "~> 4.2.0"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", ">= 4.3.3"
 gem "kaminari"
+gem "mini_magick", "4.7.0"
 gem "mysql2", "~> 0.5.2"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"

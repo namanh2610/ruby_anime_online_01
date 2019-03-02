@@ -2,6 +2,10 @@ class Movie < ApplicationRecord
   MOVIE_TYPE = %w(new update series).freeze
   YEAR = %w(0 1 2 3 4 5).freeze
 
+  validates :name, presence: true, length: {maximum: Settings.movie.max_name}
+  validates :content, presence: true, length: {minimum: Settings.movie.min_content}
+  validates :total_episodes, presence: true, numericality: {only_integer: true}
+
   belongs_to :user
   has_many :movie_objects
   has_many :comment_objects, as: :commentable
@@ -9,6 +13,9 @@ class Movie < ApplicationRecord
   has_many :images
   has_many :episodes
   has_many :movie_types, through: :movie_objects
+  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :producers
+  mount_uploader :image, PictureUploader
 
   scope :oder_name, ->{order name: :ASC}
   scope :select_movie, ->{select :id, :name, :content}
