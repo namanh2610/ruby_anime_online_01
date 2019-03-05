@@ -36,3 +36,5 @@ movie:
 producer:
   max_name: 255
   max_email: 255
+status: 1
+total_episode: 25

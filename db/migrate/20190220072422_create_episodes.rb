@@ -4,6 +4,7 @@ class CreateEpisodes < ActiveRecord::Migration[5.2]
       t.string :url
       t.boolean :status
       t.integer :movie_id
+      t.string :name
 
       t.timestamps
     end

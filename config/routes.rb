@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     end
     resources :movie_types
     resources :movie_type_years
+    resources :movie_searchs
   end
 end

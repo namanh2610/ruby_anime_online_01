@@ -110,3 +110,5 @@ vi:
   movie_type:
     error: "Không tồn tại"
     type: "Thể loại: "
+  movie_search:
+    search: "Kết quả tìm kiếm: %{text}"
