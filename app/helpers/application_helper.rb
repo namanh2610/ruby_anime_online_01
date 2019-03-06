@@ -5,6 +5,14 @@ module ApplicationHelper
   end
 
   def get_year value
-    Time.current.year - value.to_i
+    return Time.current.year - value.to_i
+  end
+
+  def watch_movie value_url
+    Settings.watch_movie.url + value_url
+  end
+
+  def get_key_url_movie id
+    Episode.find_by(id: id).url.split(Settings.watch_movie.split_share).last
   end
 end

@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   belongs_to :user_role
   has_many :movies
-  has_many :comment_objects
+  has_many :comments
 
   attr_reader :remember_token
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

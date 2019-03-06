@@ -12,18 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2019_02_27_101849) do
 
-  create_table "comment_objects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "comment_id"
-    t.integer "used_id"
-    t.integer "commentable_tyle"
-    t.string "comment"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["comment", "commentable_tyle"], name: "index_comment_objects_on_comment_and_commentable_tyle"
-  end
-
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
+    t.string "image"
+    t.integer "like_count", default: 0
+    t.integer "movie_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

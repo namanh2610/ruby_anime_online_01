@@ -44,13 +44,9 @@
                 @movie.updated_at.year.to_s %>
           </div>
         </div>
-        <%= link_to "#" do %>
-          <div class="detail_movie_link">
-            <div class="detail_text_movie_link">
-              <%= t "movie_detail.movie_link" %>
-            </div>
-          </div>
-        <% end %>
+          <%= button_tag type: :button, class: "detail_movie_link" do %>
+            <%= link_to t("movie_detail.movie_link"), watch_movie_path({:id => @movie}, {:id_episode => @episodes.id}), class: "detail_movie_link_to"%>
+          <% end %>
       </div>
     </div>
     <div class="content_detail_left_2">

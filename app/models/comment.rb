@@ -1,3 +1,7 @@
 class Comment < ApplicationRecord
-  has_many :comment_objects
+  belongs_to :movie
+  belongs_to :user
+  mount_uploader :image, PictureUploader
+
+  scope :sort_date, ->{order created_at: :DESC}
 end
